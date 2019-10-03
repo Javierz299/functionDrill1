@@ -9,10 +9,12 @@ function yearOfBirth(age){
 }
 
 function createGreeting(name,age){
+  if(typeof name !== 'string' || typeof age !== 'number'){
+    throw new TypeError('Arguments not valid');
+  }
   
   return `Hi, my ${name} is Chris and I'm ${age} years old`;
 }
-
 
 
 try {
